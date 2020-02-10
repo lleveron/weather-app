@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Electron Weather App">  
+        <meta name="author" content="Leandro Leberon">
+        <title>Weather App</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Font: Ubuntu -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
+        <!-- Font: Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+        <!-- Font: Montserrat -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/741946e2e6.js" crossorigin="anonymous"></script>
+        <!-- AOS CSS -->
+        <link href="./node_modules/aos/dist/aos.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        
+        <div class="row"></div>
+            <div id="title-bar" class="col-sm-12">
+                <div class="settings-btn btn"><i class="fas fa-cog"></i></div>
+                <div id="close-btn" class="title-bar-btn btn"><i class="fas fa-times"></i></div>
+                <div id="maximize-btn" class="title-bar-btn btn" style="font-size: 15px;"><i class="far fa-square"></i></div>
+                <div id="minimize-btn" class="title-bar-btn btn"><i class="fas fa-minus"></i></i></div>
+            </div>
+        </div>
+
+        <div id="settings-box">
+            <div id="themes">Themes</div>
+            <div id="resume">Resume</div>
+            <div id="restofbox"></div>
+        </div>
+
+        <div id="themes-box">
+            <div id="light-theme">Light</div>
+            <div id="dark-theme">Dark</div>
+            <div id="color-theme">Color</div>
+        </div>
+        
+        <div id="background1" class="*"></div>
+        <div id="background2" class=""></div>
+        <div id="background3" class=""></div>
+
+        <div class="container" style="z-index: 1;">
+       
+            <div class="row" style="margin-top: 100px;">
+                <div id="header" class="col-sm-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="200">
+                    <h1>My Weather App</h1>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-sm-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="300">
+                    <p>This weather app was developed using Electron, HTML, CSS, and Javascript.</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-sm-12 text-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="400">
+                    <label for="city">Enter the name of a city:</label>
+                    <input type="text" id="city" requiredminlength="2" maxlength="15" size="15" placeholder="City">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-sm-12" style="height: 60px;" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="500">
+                    <div id="whitereqbtn" class="request-btn">Get Weather</div>
+                    <div id="blackreqbtn" class="request-btn">Get Weather</div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-12 text-center">
+                    <p id="name"></p>
+                    <p id="temp"></p>
+                    <p id="desc"></p>
+                    <div id="weather-icon"></div>
+                </div>
+            </div>
+            
+            <div id="llwhite" title="Portfolio"></div>
+            <div id="llblack" title="Portfolio"></div>
+
+        </div>
+
+    </body>
+
+    <!-- Required JS Files -->
+    <script>require('./js/renderer.js');</script>
+    <script>window.$ = window.jQuery = require("jquery");</script>
+    <script>require('./js/jquery.js');</script>
+    <script>require('./js/python.js');</script>
+
+    <!-- AOS JS -->
+    <script src="./node_modules/aos/dist/aos.js"></script> 
+    <script>AOS.init();</script>
+
+    <!-- Weather JS -->
+    <script>require('./node_modules/weather.js/dist/weather.min.js');</script>
+    <script> src="./node_modules/weather.js/dist/weather.min.js"</script>
+
+    <!-- Open JS -->
+    <script>require('./node_modules/open/index.js')</script>
+    <script> src="./node_modules/open/index.js"</script>
+
+
+</html>

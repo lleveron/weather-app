@@ -1,0 +1,21 @@
+{
+  "name": "Weather-App",
+  "version": "1.0.0",
+  "description": "Electron Weather App",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-packager . --out=Releases --platform=win32 --arch=x64 --icon=./img/weather.ico --asar=true --prune=true --overwrite",
+    "build-mac": "electron-packager . --out=Releases --platform=darwin --arch=x64 --icon=./img/weather.icns --asar=true --prune=true --overwrite",
+    "build-lin": "electron-packager . --out=Releases --platform=linux --arch=x64 --icon=./img/weather.ico --asar=true --prune=true --overwrite"
+  },
+  "author": "Leandro Leberon",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "electron": "^8.0.0",
+    "electron-packager": "^14.2.0",
+    "jquery": "^3.4.1",
+    "open": "^7.0.2"
+  }
+}
