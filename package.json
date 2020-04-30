@@ -15,7 +15,7 @@
     "aos": "^2.3.4",
     "electron": "^8.0.0",
     "electron-packager": "^14.2.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "open": "^7.0.2"
   }
 }
