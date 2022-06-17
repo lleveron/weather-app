@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "aos": "^2.3.4",
-    "electron": "^8.0.0",
+    "electron": "^15.5.5",
     "electron-packager": "^14.2.0",
     "jquery": "^3.4.1",
     "open": "^7.0.2"
